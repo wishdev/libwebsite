@@ -4,6 +4,8 @@
 #include <ev.h>
 #include <website.h>
 
+#include "sha1.h"
+
 typedef enum {
     WS_R_NEW,
     WS_R_RECVHEADERS,

@@ -15,8 +15,6 @@
 #include <math.h>
 #include <endian.h>
 
-#include <openssl/sha.h>
-
 #include "core.h"
 
 #define bool int
@@ -765,7 +763,7 @@ static int ws_enable_websocket(ws_request_t *req) {
     char hash[20];
     memcpy(buf, key, klen);
     memcpy(buf+klen, "258EAFA5-E914-47DA-95CA-C5AB0DC85B11", 36);
-    SHA1(buf, klen+36, hash);
+//    SHA1(buf, klen+36, hash);
     base64(hash, 20, buf);
     rc = ws_add_header(req, "Sec-WebSocket-Accept", buf);
     if(rc < 0) return -1;

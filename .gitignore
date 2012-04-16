@@ -2,3 +2,7 @@
 .lock-*
 /build
 /libwebsite*.tar.bz2
+CMake*
+cmake*
+Makefile
+*.so
